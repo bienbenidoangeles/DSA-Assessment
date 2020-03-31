@@ -60,4 +60,21 @@ h.right = i;
 // I
 // J
 // K
+
+//Solution
+
+extension BinaryTreeNode {
+    func inOrderTraversal(visit: (BinaryTreeNode)->()){
+    left?.inOrderTraversal(visit: visit)
+    visit(self)
+    right?.inOrderTraversal(visit: visit)
+    }
+}
+
+f.inOrderTraversal { (node) in
+    print(node.val)
+}
+
+
+
 //: [Next](@next)
